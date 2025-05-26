@@ -14,6 +14,7 @@ import { Stories } from './pages/stories';
 import { Cart } from './pages/cart';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
+
 function App() {
   const location = useLocation();
   useEffect(() => {
