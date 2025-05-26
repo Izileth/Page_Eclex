@@ -1,0 +1,930 @@
+
+
+/* Rituals Page Styles */
+
+.rituals-page {
+  --gold: #C5A47E;
+  --ease: cubic-bezier(0.77, 0, 0.175, 1);
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.ritual-hero {
+  position: relative;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ritual-hero__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #000 0%, rgba(10, 10, 10, 0.9) 100%);
+}
+
+.ritual-hero h1 {
+  position: relative;
+  z-index: 2;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 7vw;
+  text-transform: uppercase;
+  line-height: 0.85;
+  text-align: center;
+  margin: 0 10%;
+}
+
+.ritual-hero h1 span {
+  display: block;
+  -webkit-text-stroke: 1px var(--gold);
+  color: transparent;
+}
+
+.ritual-steps {
+  padding: 10vh 5%;
+  position: relative;
+  z-index: 3;
+}
+
+.ritual-step {
+  max-width: 800px;
+  margin: 15vh auto;
+  opacity: 0;
+}
+
+.step-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+  margin-bottom: 2rem;
+}
+
+.step-number {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: var(--gold);
+}
+
+.step-title {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.step-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 300;
+  padding-left: 4rem;
+  border-left: 1px solid rgba(197, 164, 126, 0.3);
+}
+
+.brand-philosophy {
+  position: relative;
+  margin: 20vh 0;
+  padding: 10% 5%;
+}
+
+.philosophy-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(197, 164, 126, 0.05);
+  transform-origin: left;
+}
+
+.philosophy-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.philosophy-content h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.philosophy-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+em {
+  font-style: normal;
+  color: var(--gold);
+  position: relative;
+}
+
+.ceremonial-btn {
+  position: relative;
+  background: none;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 1.5rem 3rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.6s var(--ease);
+}
+
+.btn-ornament {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  transform: translateY(-50%);
+  transition: inherit;
+}
+
+.ceremonial-btn:hover {
+  padding: 1.5rem 4rem;
+  background: rgba(197, 164, 126, 0.05);
+}
+
+.ceremonial-btn:hover .btn-ornament {
+  right: -30px;
+  width: 60px;
+}
+
+
+/* LookBooks Page - Cyberpunk Elegance */
+
+.lookbooks-page {
+  --neon: #00f3ff;
+  --matrix: #0aff9d;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.lookbook-hero {
+  position: relative;
+  height: 130vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lookbook-hero__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg, 
+    rgba(0,0,0,0.9) 0%, 
+    rgba(10, 35, 40, 0.4) 50%, 
+    rgba(0,0,0,0.9) 100%
+  );
+}
+
+.matrix-text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 9vw;
+  text-transform: uppercase;
+  line-height: 0.85;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.matrix-text span {
+  display: block;
+  text-shadow: 0 0 10px var(--matrix);
+  color: transparent;
+  -webkit-text-stroke: 1px var(--matrix);
+}
+
+.matrix-text .amp {
+  font-family: 'Great Vibes', cursive;
+  -webkit-text-stroke: 1px var(--neon);
+  margin: 2rem 0;
+}
+
+.lookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  padding: 2px;
+  min-height: 200vh;
+}
+
+.lookbook-grid__item {
+  position: relative;
+  min-height: 80vh;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.lookbook-grid__item h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  position: relative;
+  z-index: 2;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: 0 0;
+  white-space: nowrap;
+}
+
+.item-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.grid-line {
+  position: absolute;
+  background: rgba(255,255,255,0.1);
+}
+
+.grid-line.vertical {
+  width: 1px;
+  height: 100%;
+  left: 50%;
+}
+
+.grid-line.horizontal {
+  height: 1px;
+  width: 100%;
+  top: 50%;
+}
+
+/* Temas */
+.theme-night { background: #0a1220; }
+.theme-dawn { background: #1a0a20; }
+.theme-dusk { background: #200a14; }
+.theme-midnight { background: #0a2020; }
+
+.lookbook-featured {
+  position: relative;
+  height: 150vh;
+  margin: 10vh 0;
+}
+
+.featured-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('https://eclex.digital/cyber-renaissance.jpg') center/cover;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.lookbook-category {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  opacity: 0;
+}
+
+.lookbook-category h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  color: var(--neon);
+  margin-top: 1rem;
+}
+
+.neon-btn {
+  position: relative;
+  padding: 1.5rem 3rem;
+  background: none;
+  border: 1px solid var(--neon);
+  color: var(--neon);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.neon-pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 1px solid var(--neon);
+  animation: neonPulse 2s infinite;
+  opacity: 0;
+}
+
+@keyframes neonPulse {
+  0% { opacity: 0; transform: scale(1); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.2); }
+}
+
+.neon-btn:hover {
+  background: rgba(0, 243, 255, 0.05);
+  
+  .neon-pulse {
+    animation: none;
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* Mobile Adaptation */
+@media (max-width: 768px) {
+  .lookbook-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .lookbook-grid__item h2 {
+    font-size: 1.5rem;
+  }
+  
+  .matrix-text {
+    font-size: 15vw;
+  }
+}
+
+
+/* Our Roots Page - Organic Tech */
+
+.roots-page {
+  --bronze: #C5A47E;
+  --ease: cubic-bezier(0.77, 0, 0.175, 1);
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.roots-hero {
+  position: relative;
+  height: 130vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.roots-hero__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg, 
+    rgba(10,10,10,0.95) 0%, 
+    rgba(40, 30, 20, 0.6) 50%, 
+    rgba(10,10,10,0.95) 100%
+  );
+  transform-origin: bottom;
+}
+
+.roots-text {
+  width: 80%;
+  height: 60vh;
+  position: relative;
+  z-index: 2;
+}
+
+.roots-text path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.roots-text text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+  fill: var(--bronze);
+}
+
+.timeline {
+  position: relative;
+  padding: 10vh 5%;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.milestone {
+  position: relative;
+  margin: 15vh 0;
+  padding-left: 120px;
+  opacity: 0;
+}
+
+.milestone-year {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2rem;
+  color: var(--bronze);
+}
+
+.milestone-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.milestone-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.timeline-connector {
+  position: absolute;
+  left: 60px;
+  top: 30px;
+  bottom: -15vh;
+  width: 1px;
+  background: rgba(197, 164, 126, 0.3);
+}
+
+.molecular-process {
+  position: relative;
+  height: 100vh;
+  margin: 20vh 0;
+}
+
+.molecule-path {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.process-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.process-text h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.forge-btn {
+  position: relative;
+  background: none;
+  border: 1px solid var(--bronze);
+  color: var(--bronze);
+  padding: 1.5rem 3rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.6s var(--ease);
+}
+
+.forge-spark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle, rgba(197,164,126,0.4) 0%, transparent 70%);
+  opacity: 0;
+  transition: inherit;
+}
+
+.forge-btn:hover {
+  background: rgba(197, 164, 126, 0.05);
+  
+  .forge-spark {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Mobile Adaptation */
+@media (max-width: 768px) {
+  .milestone {
+    padding-left: 0;
+    margin: 10vh 0;
+  }
+  
+  .milestone-year {
+    position: static;
+    margin-bottom: 1rem;
+  }
+  
+  .timeline-connector {
+    display: none;
+  }
+  
+  .roots-text text {
+    font-size: 3rem;
+  }
+}
+
+
+/* Stories Page - Temporal Interface */
+.stories-page {
+  --quantum: #00f3ff;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.stories-portal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vw;
+  opacity: 0.1;
+}
+
+.portal-geometry {
+  width: 100%;
+  height: 100%;
+  animation: portalSpin 40s linear infinite;
+}
+
+@keyframes portalSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 10vh 5%;
+  position: relative;
+  z-index: 2;
+}
+
+.story-card {
+  position: relative;
+  min-height: 400px;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.card-hologram {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 243, 255, 0.05) 0%,
+    rgba(0, 243, 255, 0) 50%,
+    rgba(0, 243, 255, 0.05) 100%
+  );
+  clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 70%);
+  transition: 0.6s var(--ease);
+}
+
+.story-card:hover .card-hologram {
+  clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.card-title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1rem;
+}
+
+.card-duration {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--quantum);
+  opacity: 0.6;
+}
+
+.card-signature {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 100px;
+  height: 30px;
+  opacity: 0.3;
+}
+
+.timegate {
+  position: relative;
+  height: 150vh;
+  margin: 20vh 0;
+}
+
+.vortex-container {
+  position: sticky;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+}
+
+.vortex-path {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: var(--quantum);
+  border-radius: 50%;
+}
+
+.tag-particle {
+  position: absolute;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: var(--quantum);
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+.tag-particle:hover {
+  opacity: 1;
+  text-shadow: 0 0 10px var(--quantum);
+}
+
+.temporal-btn {
+  position: relative;
+  padding: 1.5rem 3rem;
+  background: none;
+  border: 1px solid var(--quantum);
+  color: var(--quantum);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.6s var(--ease);
+}
+
+.timewave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 243, 255, 0.1) 50%,
+    transparent 100%
+  );
+  animation: timewave 3s infinite linear;
+  opacity: 0;
+}
+
+@keyframes timewave {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+.temporal-btn:hover {
+  background: rgba(0, 243, 255, 0.05);
+  
+  .timewave {
+    opacity: 1;
+  }
+}
+
+/* Mobile Adaptation */
+@media (max-width: 768px) {
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .story-card {
+    min-height: 300px;
+  }
+  
+  .portal-geometry {
+    display: none;
+  }
+}
+
+/* Carrinho como Instalação Digital */
+
+.art-cart {
+  --gold: #C5A47E;
+  --quantum: #00f3ff;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  background: #0a0a0a;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.cart-scroll {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5vh 5%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.fluid-header {
+  position: relative;
+  margin: 10vh 0;
+}
+
+.fabric-flow {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  animation: fabricFloat 20s infinite linear;
+}
+
+@keyframes fabricFloat {
+  50% { transform: translateY(10px); }
+}
+
+.fluid-header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  text-align: center;
+  mix-blend-mode: soft-light;
+}
+
+.art-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 20vh 0;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.item-visual {
+  position: relative;
+  min-height: 300px;
+}
+
+.material-wave {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.art-item h2 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  position: relative;
+  z-index: 2;
+}
+
+.item-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+
+.price-particle {
+  font-family: monospace;
+  font-size: 2rem;
+  color: var(--quantum);
+  position: relative;
+  padding: 0.5rem;
+  background: rgba(0, 243, 255, 0.05);
+}
+
+.material-tag {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  cursor: pointer;
+  transition: 0.6s var(--ease);
+}
+
+.material-tag:hover {
+  background: rgba(197, 164, 126, 0.1);
+}
+
+.quantity-interface {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quantity-interface button {
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.quantity-interface button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.quantum-total {
+  position: relative;
+  margin: 20vh 0;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.total-wave {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.3;
+}
+
+.total-meta {
+  position: relative;
+  z-index: 2;
+}
+
+.total-meta h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  color: var(--quantum);
+  margin-top: 1rem;
+}
+
+.neo-checkout {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  background: none;
+  border: 1px solid var(--quantum);
+  color: var(--quantum);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.6s var(--ease);
+}
+
+.energy-core {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle, rgba(0,243,255,0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: inherit;
+}
+
+.neo-checkout:hover {
+  background: rgba(0, 243, 255, 0.05);
+  
+  .energy-core {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Mobile Adaptation */
+@media (max-width: 768px) {
+  .art-item {
+    grid-template-columns: 1fr;
+    margin: 10vh 0;
+  }
+  
+  .fluid-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .art-item h2 {
+    font-size: 1.5rem;
+  }
+}

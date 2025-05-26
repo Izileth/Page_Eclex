@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s;
 }
 
 body{
@@ -335,3 +336,58 @@ p{
     transform: translateY(120%); /* Posição inicial para animação */
     will-change: transform;
 }
+
+/*Aba de Transição */
+
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0.95;
+    will-change: clip-path, opacity;
+    background: linear-gradient(
+        45deg, 
+        #000 0%, 
+        #1a1a1a 50%, 
+        #000 100%
+    );
+}
+
+.route-transition-group {
+  position: relative;
+}
+
+.route-item {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.route-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.route-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.route-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.route-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/**/

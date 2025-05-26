@@ -6,36 +6,32 @@ import CallToAction from './components/CallToAction';
 
 import { initAnimations } from './scripts/animations';
 
+import Home from './pages/home';
+import { Rituals } from './pages/rituals';
+import { LookBooks } from './pages/looks';
+import { OurRoots } from './pages/roots';
+import { Stories } from './pages/stories';
+import { Cart } from './pages/cart';
+import { Routes, Route, useLocation } from 'react-router-dom';
+
 function App() {
+  const location = useLocation();
   useEffect(() => {
     initAnimations();
-  }, []);
+  }, [location.pathname]);
 
   
 
   return (
     <main>
-      <div className="loader">
-        <Loader />
-        <div className="container">
-          <Hero />
-          <Navigation />
-        </div>
-        <div className="header">
-          <div className="hero-copy">
-            <div className="line">
-              <h1><span>Ecléx</span> Life</h1>
-            </div>
-            <div className="line">
-              <h1>Create <span>Your Style</span></h1>
-            </div>
-          </div>
-          <div className="line">
-            <p> 2025 | All Judices Reserverd</p>
-          </div>
-        </div>
-        <CallToAction />
-      </div>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/rituals" element={<Rituals/>} />
+          <Route path="/looks" element={<LookBooks/>} />
+          <Route path="/roots" element={<OurRoots/>} />
+          <Route path="/stories" element={<Stories/>} />
+          <Route path="/cart" element={<Stories/>} />
+        </Routes>
     </main>
   );
 }
