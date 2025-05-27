@@ -26,7 +26,7 @@ function Footer(){
                 <div className="footer-line"></div>
                 <div className="footer-bt">
                     <div className="footer-brand">
-                        <h2>Eclex <span>Shop</span></h2>
+                        <h2>Eclex <span>Life</span></h2>
                         <p>Clean, Conscious, Clinical Skincare! Honest products that truly work</p>
                         <p>© 2025 TrueKind, All Rights Reserved</p>
                     </div>

@@ -1,9 +1,98 @@
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import Bar from "../components/Bar";
-export function Stories() {
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
+
+export function Stories() {
+    const container = useRef();
     const navigate = useNavigate()
+
+        useGSAP(() => {
+        // Configuração do ScrollSmoother (opcional)
+        ScrollSmoother.create({
+            smooth: 1.5,
+            effects: true
+        });
+        
+        // Animação do conteúdo principal
+        gsap.fromTo('stories-bx',
+            { opacity: 0 },
+            {
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.inOut'
+            }
+        );
+
+        // Animação da imagem
+        gsap.from('.stories-grid', {
+            opacity: 0,
+            y: 80,
+            x: 20,
+            duration: 1.5,
+            ease: 'power3.out'
+        });
+        
+        gsap.from('.stories-ct-ig', {
+            opacity: 0,
+            y: 80,
+            x: 20,
+            duration: 1.5,
+            ease: 'power3.out'
+        });
+
+        // Animação do botão
+        // Animação dos textos
+        gsap.from('.stories-ig', {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: '.rituals-ct',
+                start: 'top center'
+            }
+        });
+        
+        gsap.from('.stories-ig h2', {
+            opacity: 0,
+            y: 80,
+            x: 10,
+            duration: 1.5,
+            ease: 'power3.inOut'
+        });
+        gsap.from('.stories-ig .stories-ig-btn', {
+            y: 80,
+            x: 10,
+            duration: 1.5,
+            ease: 'power3.inOut'
+        });
+        gsap.from('.stories-ig .lg-icon',{
+            opacity: 0,
+            y: 20,
+            duration: 1.5,
+            ease: 'power4.out'
+         });
+
+        
+        gsap.from('.rituals-word-2', {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: '.rituals-ct',
+                start: 'top center'
+            }
+        });
+
+    }, { scope: container });
 
     const handleNavigate = () => 
         navigate('/rituals')
@@ -13,7 +102,7 @@ export function Stories() {
         <>
         <Bar/>
         </>
-            <section className="stories-bx">
+            <section ref={container} className="stories-bx">
                 <div className="stories-ct">
                     <div className="stories-ig">
                         <span className="lg-icon">Destacts</span>
